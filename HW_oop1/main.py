@@ -14,8 +14,9 @@ class Student:
 
         courses = ', '.join(self.courses_in_progress)
         finished_courses = ', '.join(self.finished_courses)
-        return (f'Имя: {self.name}\nФамилия: {self.surname}\nСредняя оценка за домашние задания: {self.average_mark()}\n'
-                f'Курсы в процессе изучения: {courses}\nЗавершенные курсы: {finished_courses}')
+        return (f'Имя: {self.name}\nФамилия: {self.surname}\nСредняя оценка за домашние задания: '
+                f'{self.average_mark()}\n'f'Курсы в процессе изучения: {courses}\n'
+                f'Завершенные курсы: {finished_courses}')
 
     def __eq__(self, other):
         return self.average_mark() == other.average_mark()
@@ -48,6 +49,7 @@ class Student:
                     lecturer.course_mark[course_name] = [lector_mark]
             else:
                 return 'Ошибка'
+
 
 class Mentor:
     def __init__(self, name, surname):
