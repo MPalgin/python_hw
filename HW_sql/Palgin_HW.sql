@@ -1,5 +1,5 @@
 create table if not exists genre (
-	genre_id int primary key,
+	genre_id SERIAL primary key,
 	genre_name VARCHAR(60) not NULL
 );
 
@@ -11,7 +11,7 @@ create table if not exists author (
 create table if not exists albom (
 	albom_id SERIAL primary key,
 	albom_name VARCHAR(60) not null,
-	issue_year VARCHAR(60) not null
+	issue_year INTEGER not null
 );
 
 create table if not exists track (
@@ -22,26 +22,26 @@ create table if not exists track (
 );
 
 create table if not exists compilation (
-	compilation_id int primary key,
+	compilation_id SERIAL primary key,
 	compilation_name VARCHAR(60) not null,
-	issue_year int not null
+	issue_year INTEGER not null
 );
 
 create table if not exists genre_by_author(
-	genre_id int references genre(genre_id),
-	author_id int references author(author_id),
+	genre_id INTEGER references genre(genre_id),
+	author_id INTEGER references author(author_id),
 	constraint PK primary key(genre_id, author_id)
 );
 
 create table if not exists albom_by_author(
-	albom_id int references albom(albom_id),
-	author_id int references author(author_id),
+	albom_id INTEGER references albom(albom_id),
+	author_id INTEGER references author(author_id),
 	constraint Albom_Author primary key(albom_id, author_id)
 );
 
 create table if not exists tracks_in_compilation(
-	compilation_id int references compilation(compilation_id),
-	track_id int references track(track_id),
+	compilation_id INTEGER references compilation(compilation_id),
+	track_id INTEGER references track(track_id),
 	constraint Tracks primary key(compilation_id, track_id)
 );
 
@@ -69,46 +69,53 @@ values(1, 'Europian music', 2000), (2, 'World classic', 2005), (3, 'Songs of 200
 insert into tracks_in_compilation(compilation_id, track_id)
 values(1, 1), (1, 2), (1, 5), (2, 1), (2,2), (3, 4), (3, 5), (3, 6), (4, 3), (4, 4);
 
+--Название и продолжительность самого длительного трека
 
 select max(duration), track_name from track
 group by track_name
 limit 1;
 
+--Название треков, продолжительность которых больше 3.5 минут
 select track_name from track
 where duration/60 >= 3.5;
 
+--Названия сборников, вышедших в период с 2018 по 2020 год включительно
 select compilation_name from compilation
 where issue_year between '2018' and '2020';
 
+--Исполнители, чьё имя состоит из одного слова
 select author_name from author
 where author_name not like ' %';
 
+--Название треков, которые содержат слово «мой» или «my»
 select track_name from track
 where lower(track_name) like '%my%' or lower(track_name) like '%мой%';
 
+--Количество исполнителей в каждом жанре
 select genre_name, count(a.author_name) from genre g 
 left join genre_by_author gba on g.genre_id = gba.genre_id 
 left join author a on gba.author_id = a.author_id 
 group by genre_name
 order by count(a.author_name) desc;
 
-
+--Количество треков, вошедших в альбомы 2019-2020 годов
 select count(track_name) from track t 
 left join albom a on t.albom_id = a.albom_id 
-where issue_year between '2019' and '2020';
+where issue_year between 2019 and 2020;
 
-
+--Средняя продолжительность треков по каждому альбому
 select a.albom_name, avg(duration) from track t 
 left join albom a on t.albom_id = a.albom_id 
 group by albom_name
-order by avg(duration); 
+order by avg(duration);
 
+--Все исполнители которые не выпустили альбомы в 2020 году
 select author_name from author a 
 left join albom_by_author aba on a.author_id = aba.author_id 
 left join albom a2 on a2.albom_id = aba.albom_id 
-where author_name not in (select author_name from albom_by_author where issue_year between '2020' and '2021');
+where author_name not in (select author_name from albom_by_author where issue_year between 2020 and 2021);
 
-
+--Названия сборников, в которых присутствует конкретный исполнитель
 select compilation_name from compilation c
 left join tracks_in_compilation tic on tic.compilation_id = c.compilation_id 
 left join track t on t.track_id = tic.track_id 
