@@ -1,0 +1,13 @@
+Log time: 2024-10-10 21:30:05.176061
+Function name: hello_world
+Function args: (), {}
+Return: Hello WorldLog time: 2024-10-10 21:30:05.176061
+Function name: summator
+Function args: (2, 2), {}
+Return: 4Log time: 2024-10-10 21:30:05.181060
+Function name: div
+Function args: (6, 2), {}
+Return: 3.0Log time: 2024-10-10 21:30:05.187068
+Function name: summator
+Function args: (4.3,), {'b': 2.2}
+Return: 6.5
