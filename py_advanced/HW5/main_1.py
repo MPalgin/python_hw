@@ -1,7 +1,9 @@
 import os
 from functools import wraps
 from datetime import datetime
-from Python_course.py_advanced.HW4.generator import flat_generator
+
+
+# Задание 1
 def logger(old_function):
     @wraps(old_function)
     def new_function(*args, **kwargs):

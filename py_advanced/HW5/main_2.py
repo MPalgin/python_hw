@@ -5,6 +5,8 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 
+
+# Задание 2
 def logger(path):
     def __logger(old_function):
         @wraps(old_function)
