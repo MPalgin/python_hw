@@ -62,3 +62,13 @@ pip install -r requirements.txt
 ```bash
 python manage.py runserver
 ```
+
+Пример работы проекта:
+
+http://127.0.0.1:8000/omlet/?servings=4
+
+![image](https://github.com/user-attachments/assets/00e56ec3-2ef3-4cb8-b692-3a9a5f94a6c6)
+
+http://127.0.0.1:8000/omlet/
+
+![image](https://github.com/user-attachments/assets/676fe09e-943c-4391-8433-2841656f5190)
