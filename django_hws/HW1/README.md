@@ -44,3 +44,18 @@ pip install -r requirements.txt
 ```bash
 python manage.py runserver
 ```
+Результаты работы проекта:
+
+домашняя страница:
+
+![image](https://github.com/user-attachments/assets/b57e3627-2571-48dd-be96-eefe6c7a5da8)
+
+current_time
+
+![image](https://github.com/user-attachments/assets/caf4d863-a29c-4c6c-9faa-25bc2e694eb3)
+
+workdir
+
+![image](https://github.com/user-attachments/assets/c0ea50bc-75f2-4713-91a3-5dc65a6067e1)
+
+
