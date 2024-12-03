@@ -1,4 +1,8 @@
 # Миграции
+#Пример работы проекта:
+
+![image](https://github.com/user-attachments/assets/d9218e27-7470-4ed1-a359-7d0a43f9d738)
+
 
 ## Задание
 
