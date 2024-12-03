@@ -75,3 +75,20 @@ python manage.py runserver
 python manage.py makemigrations
 python manage.py migrate
 ```
+Пример работы проекта:
+
+Каталог:
+
+![image](https://github.com/user-attachments/assets/6c66b811-c88f-4376-9ba5-7cc9b63ce12a)
+
+Сортировка по названию:
+
+![image](https://github.com/user-attachments/assets/4739d4c5-3835-4e6a-a9a0-d46e54f057c6)
+
+Сортировка начиная с дешевых:
+
+![image](https://github.com/user-attachments/assets/efb8973a-f1ac-40cc-bee3-6ea181598516)
+
+Сортировка начиная с дорогих:
+
+![image](https://github.com/user-attachments/assets/df5c603b-4569-4198-905b-8888477f1085)
