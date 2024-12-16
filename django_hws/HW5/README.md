@@ -1,3 +1,26 @@
+## Пример работы проекта:
+
+Добавление датчика:
+
+![image](https://github.com/user-attachments/assets/1cb45def-0bd4-472d-acca-ee72f17aabbc)
+
+Добавление измерений:
+
+![image](https://github.com/user-attachments/assets/bc7a0758-5db2-451e-87ae-3dc9a468c0bb)
+
+Получение информации о датчиках:
+
+![image](https://github.com/user-attachments/assets/ed41eecf-caad-4bc8-b241-72f6239a0b41)
+
+Получение подробной информации о датчиках:
+
+![image](https://github.com/user-attachments/assets/10921282-0564-43e0-85ce-2c90b57800c4)
+
+Изменение информации о датчике:
+
+![image](https://github.com/user-attachments/assets/0d7c7f23-429f-473c-8048-334244aa4092)
+
+
 # Умный дом
 
 ## Техническая задача: реализовать некоторые действия из CRUD, используя Django Rest Framework.
