@@ -1,3 +1,16 @@
+## Пример работы проекта:
+
+Новость с добавленным тэгом:
+
+![image](https://github.com/user-attachments/assets/678402a5-7d50-4c8f-9683-579fd3d44108)
+
+Админка с добавлением тэга:
+
+![image](https://github.com/user-attachments/assets/c91b6dc3-52a3-4640-b585-99fb45c7b8d1)
+
+![image](https://github.com/user-attachments/assets/6528352a-4f04-4b58-a155-5ba8cf876b4c)
+
+
 ## Задание
 
 Есть небольшой новостной сайт.
