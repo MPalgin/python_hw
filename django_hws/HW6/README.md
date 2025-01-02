@@ -1,3 +1,7 @@
+Пример работы поиска по имени:
+![image](https://github.com/user-attachments/assets/7a19a0a9-7a7e-4cdf-ba4f-d8cee5fcef2f)
+
+
 # Склады и товары
 
 ## Техническая задача: реализовать CRUD-логику для продуктов и складов, используя Django Rest Framework.
