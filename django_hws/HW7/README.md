@@ -1,3 +1,34 @@
+Пример работы приложения:
+При открытии больше 10 объявлений:
+
+![image](https://github.com/user-attachments/assets/3a73be55-a5b4-4023-888e-127b22c5d236)
+
+После закрытия одного из объявлений:
+
+![image](https://github.com/user-attachments/assets/b279d90b-c41c-40a0-a621-b20afe9c0fb0)
+
+![image](https://github.com/user-attachments/assets/13ffc15e-0124-4a89-b39c-5cfe77741b6e)
+
+Пример фильтра по времени:
+
+Успешный запрос:
+```
+GET http://localhost:8000/api/advertisements/?created_at_before=2025-01-07
+Content-Type: application/json
+
+```
+
+![image](https://github.com/user-attachments/assets/712c31b9-bf77-4fa4-9858-0da3e8e3f819)
+
+Пустой запрос:
+```
+GET http://localhost:8000/api/advertisements/?created_at_before=2025-01-06
+Content-Type: application/json
+
+```
+![image](https://github.com/user-attachments/assets/d3e54826-3638-4fa4-b701-217a323a6499)
+
+
 # Backend для приложения с объявлениями
 
 ## Описание
