@@ -9,7 +9,7 @@ GET юзера:
 POST юзера:
 ```
 200
-{'id': 6, 'name': 'Boris'}
+{'id': 1, 'name': 'Ivan'}
 ```
 
 GET юзера:
@@ -22,14 +22,14 @@ GET юзера:
 PATCH юзера:
 ```
 200
-{'id': 10}
+{'id': 1}
 ```
 
 DELETE юзера:
 
 ```
 200
-{'deleted': 'Andrey'}
+{'deleted': 'Stepan'}
 ```
 
 POST объявления:
