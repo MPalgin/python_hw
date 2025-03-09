@@ -1,0 +1,5 @@
+aiohttp
+more-itertools
+SQLAlchemy
+python-dotenv
+asyncpg
